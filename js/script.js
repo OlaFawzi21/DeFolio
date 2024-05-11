@@ -1,4 +1,5 @@
 
+// for loading counters
 function playAction ()
 {
     let counters = document.querySelectorAll( ".counter" );
@@ -20,9 +21,9 @@ function playAction ()
             }
         } UpDate();
     } );
-
 }
 
+// when reach in specific scroll height playAction
 function checkScrollPosition ()
 {
     let scrollHeight;
@@ -39,11 +40,11 @@ function checkScrollPosition ()
         playAction();
     }
 }
-
-
 window.addEventListener( 'scroll', checkScrollPosition );
 
+// -------------------------------------------------------------
 
+// to scroll move top auto
 function ScrollUp ()
 {
     let btn = document.querySelector( "#scrollUp" );
@@ -65,3 +66,71 @@ function ScrollUp ()
 
 }
 window.addEventListener( 'scroll', ScrollUp );
+
+// -------------------------------------------------------------
+
+function ModalImages ()
+{
+    let cardImages = document.querySelectorAll( ".work-img" );
+    let modalBox = document.querySelector( ".modal-box" );
+    let modalImage = document.querySelector( ".modal-img" );
+    let cancelIcon = document.querySelector( ".modal-box .bi-x" );
+    let leftIcon = document.querySelector( ".modal-box .bi-chevron-left" );
+    let rightIcon = document.querySelector( ".modal-box .bi-chevron-right" );
+
+    let currentIndex = 0;
+
+    // Function to update the modal image
+    function updateModalImage ( index )
+    {
+        modalImage.src = cardImages[ index ].src;
+    }
+
+    // Add event listener for each image
+    cardImages.forEach( ( image, i ) =>
+    {
+        image.addEventListener( "click", () =>
+        {
+            modalBox.classList.add( "active" );
+            currentIndex = i;
+            updateModalImage( currentIndex );
+        } );
+    } );
+
+    // Add event listeners for left and right icons
+    leftIcon.addEventListener( 'click', () =>
+    {
+        currentIndex = ( currentIndex - 1 + cardImages.length ) % cardImages.length;
+        updateModalImage( currentIndex );
+    } );
+
+    rightIcon.addEventListener( 'click', () =>
+    {
+        currentIndex = ( currentIndex + 1 ) % cardImages.length;
+        updateModalImage( currentIndex );
+
+    } );
+
+    cancelIcon.addEventListener( 'click', () =>
+    {
+        modalBox.classList.remove( "active" );
+    } );
+}
+
+ModalImages();
+
+// -------------------------------------------------------------
+
+function swapPage ()
+{
+    let cards = document.querySelectorAll( ".plus-card" );
+    cards.forEach( ( card ) =>
+    {
+        card.addEventListener( 'click', () =>
+        {
+            window.location.href = 'portfolio-details.html';
+        } );
+    } );
+}
+
+swapPage();

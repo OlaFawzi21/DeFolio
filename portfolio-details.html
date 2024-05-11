@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio Details</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </head>
+
+    <body>
+        <header class="py-2 position-fixed w-100 top-0 text-white">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg justify-content-between">
+                    <a class="navbar-brand fw-bold" href="#">DevFolio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="bi bi-list text-white fs-4"></i>
+                    </button>
+                    <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link p-0" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link p-0" href="#about">About</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link p-0" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link p-0" href="#work">Work</a>
+                            </li>
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link p-0 dropdown-toggle" href="#blog" id="navbarDropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Blog
+                                </a>
+                                <div class="dropdown-menu py-2" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item py-2" href>Action</a>
+                                    <a class="dropdown-item py-2" href>Another action</a>
+                                    <a class="dropdown-item py-2" href>Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link p-0" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="portfolio-home d-flex flex-column align-items-center justify-content-center text-white position-relative">
+            <div class="over position-absolute w-100 h-100"></div>
+            <h1 class="head position-relative">PORTFOLIO DETAILS</h1>
+            <p class="position-relative">Home / Portfolio Details</p>
+        </section>
+        <section class="portfolio-detail py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/work-1.jpg" alt="work-1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/work-2.jpg" alt="work-2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/work-3.jpg" alt="work-3">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-info mb-5 p-4">
+                            <h5 class="mb-3 fw-bold">Project information</h5>
+                            <p class="mb-1"><span class="fw-bold me-1">Category:</span> Web design</p>
+                            <p class="mb-1"><span class="fw-bold me-1">Client:</span> ASU Company</p>
+                            <p class="mb-1"><span class="fw-bold me-1">Project date:</span> 01 March, 2020</p>
+                            <p class="mb-1"><span class="fw-bold me-1">Project URL:</span> www.example.com</p>
+                        </div>
+                        <div class="content-detail">
+                            <h4 class="mb-3 fw-bold">This is an example of portfolio detail</h4>
+                            <p>
+                                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi
+                                labore quia
+                                quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim.
+                                Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi
+                                nulla
+                                at esse enim cum deserunt eius.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="copyright text-center text-white position-relative py-4">
+            <p class="m-0">
+                © Copyright <strong>DevFolio</strong>. All Rights
+                Reserved
+            </p>
+            <p class="m-0">Designed by BootstrapMade</p>
+        </footer>
+
+        <div id="scrollUp"
+            class="rounded-circle bg-primary position-fixed opacity-0 d-flex align-items-center justify-content-center text-white">
+            <i class="bi bi-arrow-up"></i>
+        </div>
+
+
+        <script src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js.map"></script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper( '.swiper', {
+                speed: 400,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            } );
+
+
+        </script>
+    </body>
+
+</html>

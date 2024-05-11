@@ -45,7 +45,7 @@
                                     <a class="dropdown-item py-2" href>Action</a>
                                     <a class="dropdown-item py-2" href>Another action</a>
                                     <a class="dropdown-item py-2" href>Something else here</a>
-                                </div>  
+                                </div>
                             </li>
                             <li class="nav-item mx-3">
                                 <a class="nav-link p-0" href="#contact">Contact</a>
@@ -281,14 +281,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-1.jpg" alt="work-1">
+                                <img class="img-fluid work-img" src="images/work-1.jpg" alt="work-1">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Lorem impsum dolor</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href><i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -296,14 +296,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-2.jpg" alt="work-2">
+                                <img class="img-fluid work-img" src="images/work-2.jpg" alt="work-2">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Loreda Cuno Nere</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href><i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -311,14 +311,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-3.jpg" alt="work-3">
+                                <img class="img-fluid work-img" src="images/work-3.jpg" alt="work-3">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Mavrito Lana Dere</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href> <i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -326,14 +326,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-4.jpg" alt="work-4">
+                                <img class="img-fluid work-img" src="images/work-4.jpg" alt="work-4">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Bindo Laro Cado</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href><i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -341,14 +341,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-5.jpg" alt="work-5">
+                                <img class="img-fluid work-img" src="images/work-5.jpg" alt="work-5">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Studio Lena Mado</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href><i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -356,14 +356,14 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="mb-5 work-card">
                             <div class="pic">
-                                <img class="img-fluid" src="images/work-6.jpg" alt="work-6">
+                                <img class="img-fluid work-img" src="images/work-6.jpg" alt="work-6">
                             </div>
                             <div class="content d-flex align-items-center justify-content-between p-4">
                                 <div>
                                     <p>Studio Big Bang</p>
                                     <p><span>Web Design</span> / 18 Sep. 2018</p>
                                 </div>
-                                <a href><i class="bi bi-plus-circle"></i></a>
+                                <div class="plus-card"><i class="bi bi-plus-circle"></i></div>
                             </div>
                         </div>
                     </div>
@@ -385,7 +385,7 @@
                                 consectetur adipiscing elit.
                             </p>
                         </div>
-                        <div class="swiper-slide flex-col gap-2">
+                        <div class="swiper-slide flex-col gap-3">
                             <img class="rounded-circle" src="images/testimonial-4.jpg" alt="testimonial-4">
                             <h4 class="m-0">MARTA SOCRATE</h4>
                             <p class="fs-5 fw-light text-center">
@@ -557,6 +557,13 @@
             <i class="bi bi-arrow-up"></i>
         </div>
 
+        <div
+            class="modal-box position-fixed start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <img class="modal-img" src="">
+            <i class="bi bi-x position-absolute text-white fs-3"></i>
+            <i class="bi bi-chevron-left position-absolute text-white"></i>
+            <i class="bi bi-chevron-right position-absolute text-white"></i>
+        </div>
         <!-- scripts -->
         <script src="js/script.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>

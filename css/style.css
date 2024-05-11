@@ -65,7 +65,7 @@ header nav .navbar-nav li {
         position: absolute;
         content: "";
         width: 0;
-        height: .5px;
+        height: 1.5px;
         background-color: var(--color-main);
         bottom: -5px;
         left: 0;
@@ -151,11 +151,18 @@ header nav .navbar-toggler:focus {
     height: 5px;
     width: 3rem;
     background-color: var(--color-tertiary) !important;
-    transition: .3s;
+    animation: line 3s infinite linear;
+    transition: 1s;
 }
 
-.title-header:hover .line {
-    width: 8.5rem;
+@keyframes line {
+    from {
+        width: 3rem;
+    }
+
+    to {
+        width: 8.5rem;
+    }
 }
 
 .services .service-card {
@@ -209,10 +216,14 @@ header nav .navbar-toggler:focus {
     transition: .4s;
 }
 
-.services .statics .icon + p {
+.services .statics p:nth-of-type(1) {
     font-size: 2rem;
 }
 
+.services .statics p:nth-of-type(2)
+{
+    font-size: 15px;
+}
 .services .statics p,
 .work .work-card p {
     margin: 0;
@@ -234,9 +245,10 @@ header nav .navbar-toggler:focus {
     transition: all 1s;
 }
 
-.work .work-card a {
+.work .work-card .plus-card {
     font-size: 1.25rem;
     color: var(--color-tertiary) !important;
+    cursor: pointer;
 }
 
 .work .work-card p:nth-of-type(1) {
@@ -348,6 +360,70 @@ footer.copyright {
     color: var(--color-tertiary) !important;
 }
 
+@media (max-width:576px) and (min-width:350px) {
+    .work .work-card p:nth-of-type(1) {
+        font-size: 1.25rem;
+    }
+
+    .work .work-card a {
+        font-size: 2.5rem !important;
+    }
+}
+
+.modal-box {
+    background-color: rgba(6, 6, 6, 91%);
+    z-index: 666;
+    overflow: auto;
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+}
+
+.modal-box.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-img {
+    max-width: 85vw;
+    height: 70vh;
+    margin-top: 5rem;
+}
+
+.modal-box .bi-x {
+    top: 15%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.modal-box .bi-chevron-left,
+.modal-box .bi-chevron-right {
+    top: 50%;
+    cursor: pointer;
+}
+
+.modal-box .bi-chevron-left {
+    left: 5%;
+}
+
+.modal-box .bi-chevron-right {
+    right: 5%;
+}
+
+.modal-box.active .modal-img {
+    animation: zoomImg 0.3s ease-in-out;
+}
+
+@keyframes zoomImg {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 @media (max-width:767px) {
     .home .main-title {
         font-size: 2.8rem;
@@ -357,14 +433,64 @@ footer.copyright {
         font-size: 1.5rem;
     }
 
+    .modal-img {
+        height: auto !important;
+    }
+
+    .modal-box .bi-chevron-left,
+    .modal-box .bi-chevron-right {
+        top: 95% !important;
+    }
+
+    .modal-box .bi-chevron-left {
+        left: 40% !important;
+    }
+
+    .modal-box .bi-chevron-right {
+        right: 40% !important;
+    }
+
 }
 
-@media (max-width:576px) and (min-width:350px) {
-    .work .work-card p:nth-of-type(1) {
-        font-size: 1.25rem;
-    }
 
-    .work .work-card a {
-        font-size: 2.5rem !important;
-    }
+/* portfolio page */
+
+.portfolio-home {
+    background-image: url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    margin-top: 80px;
+}
+
+.portfolio-home .over {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-detail .content-info {
+    background-color: var(--color-main);
+    box-shadow: var(--box-shadow-card);
+}
+
+.portfolio-detail .content-info p {
+    font-size: 15px;
+    color: rgb(78, 78, 78);
+}
+
+.portfolio-detail .content-detail p {
+    color: rgb(78, 78, 78);
+}
+
+.portfolio-detail .swiper-wrapper {
+    margin-bottom: 3rem;
+}
+
+.portfolio-detail .swiper-pagination .swiper-pagination-bullet {
+    background-color: rgba(48, 47, 47, 0.4) !important;
+    opacity: 1;
+}
+
+.portfolio-detail .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--color-tertiary) !important;
 }
